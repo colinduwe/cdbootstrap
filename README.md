@@ -4,8 +4,6 @@
 [![Github Last Commit](https://img.shields.io/github/last-commit/understrap/understrap)](https://github.com/understrap/understrap/commits/master)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
 
-#### See: [Official Demo](https://understrap.com/understrap) | Read: [Official Docs Page](https://understrap.github.io/)
-
 # UnderStrap WordPress Theme Framework
 
 Website: [https://understrap.com](https://understrap.com)
@@ -19,6 +17,7 @@ OverStrap Child Themes: [https://understrap.com/overstrap/](https://understrap.c
 I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what UnderStrap is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for UnderStrap.
 
 ## License
+CDBootstrap Wordpress Theme, Copyright 2020 Colin Duwe
 UnderStrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
 UnderStrap is distributed under the terms of the GNU GPL version 2
 
