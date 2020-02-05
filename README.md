@@ -4,9 +4,9 @@
 [![Github Last Commit](https://img.shields.io/github/last-commit/understrap/understrap)](https://github.com/understrap/understrap/commits/master)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
 
-# UnderStrap WordPress Theme Framework
+# CDBootstrap WordPress Theme Framework
 
-Website: [https://understrap.com](https://understrap.com)
+Original Project: [https://understrap.com](https://understrap.com)
 
 Child Theme Project: [https://github.com/understrap/understrap-child](https://github.com/understrap/understrap-child)
 
