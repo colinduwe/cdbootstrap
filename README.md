@@ -14,9 +14,9 @@ OverStrap Child Themes: [https://understrap.com/overstrap/](https://understrap.c
 I like Understrap but I have my own opinions. I've forked that great project here and swapped out the old build process for Laraval-Mix and just refined how packages are included. This is intended as a start theme rather than a parent theme.
 
 ## License
-CDBootstrap Wordpress Theme, Copyright 2020 Colin Duwe
-UnderStrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
-CDBootstrap is distributed under the terms of the GNU GPL version 2
+- CDBootstrap Wordpress Theme, Copyright 2020 Colin Duwe
+- UnderStrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
+- CDBootstrap is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
@@ -44,21 +44,17 @@ Why not add a well known and supported layout framework to have a solid, clean a
 
 Some basics about the Sass and CSS files that come with CDBootstrap:
 - The theme itself uses the `/style.css`file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
-- The `/css/theme.css` and its minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
+- The `/dist/css/app.css` file provides all styles. It is composed of five different SCSS sets and one variable file at `/src/scss/app.scss`:
 
- ```@import "theme/theme_variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or CDBootstrap variables here
- @import "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // 2. All the Bootstrap stuff - Don´t edit this!
- @import "cdbootstrap/cdbootstrap"; // 3. Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
- @import "../src/fontawesome/scss/font-awesome"; // 4. Font Awesome Icon styles
+ ```@import "variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or CDBootstrap variables here
+ @import "~bootstrap/scss/bootstrap";  // 2. All the Bootstrap stuff - Don´t edit this!
+ @import "understrap/understrap"; // 3. Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
+ @import "~@fortawesome/fontawesome-pro/scss/fontawesome"; // 4. Font Awesome Pro Icon styles
  // Any additional imported files //
- @import "theme/theme";  // 5. Add your styles into this file
+ @import "components/galleries";  // 5. Add additional style files here
  ```
 
 - Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update CDBootstrap without overwriting your own work!
-- Your design goes into: `/sass/theme`.
-  - Add your styles to the `/sass/theme/_theme.scss` file
-  - And your variables to the `/sass/theme/_theme_variables.scss`
-  - Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
 
 ## Installation
 - In your terminal, navigate to your wp-content/themes directory and clone this project
