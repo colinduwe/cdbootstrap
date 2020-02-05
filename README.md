@@ -1,24 +1,21 @@
-[![Build Status](https://api.travis-ci.org/cdbootstrap/cdbootstrap.svg?branch=master)](https://travis-ci.org/cdbootstrap/cdbootstrap)
-[![Wordpress Theme Version](https://img.shields.io/wordpress/theme/v/cdbootstrap.svg)](https://wordpress.org/themes/cdbootstrap) 
-[![Wordpress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/cdbootstrap.svg)](https://wordpress.org/themes/cdbootstrap/) 
-[![Github Last Commit](https://img.shields.io/github/last-commit/cdbootstrap/cdbootstrap)](https://github.com/cdbootstrap/cdbootstrap/commits/master) 
+[![Github Last Commit](https://img.shields.io/github/last-commit/cdbootstrap/cdbootstrap)](https://github.com/colinduwe/cdbootstrap) 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
 
 # CDBootstrap WordPress Theme Framework
 
-Original Project: [https://cdbootstrap.com](https://cdbootstrap.com)
+Original Project: [https://understrap.com](https://understrap.com)
 
-Child Theme Project: [https://github.com/cdbootstrap/cdbootstrap-child](https://github.com/cdbootstrap/cdbootstrap-child)
+Child Theme Project: [https://github.com/understrap/understrap-child](https://github.com/understrap/understrap-child)
 
-OverStrap Child Themes: [https://cdbootstrap.com/overstrap/](https://cdbootstrap.com/overstrap/)
+OverStrap Child Themes: [https://understrap.com/overstrap/](https://understrap.com/overstrap/)
 
 ## About
 
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what CDBootstrap is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for CDBootstrap.
+I like Understrap but I have my own opinions. I've forked that great project here and swapped out the old build process for Laraval-Mix and just refined how packages are included. This is intended as a start theme rather than a parent theme.
 
 ## License
 CDBootstrap Wordpress Theme, Copyright 2020 Colin Duwe
-CDBootstrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
+UnderStrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
 CDBootstrap is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
@@ -32,11 +29,10 @@ See [changelog](CHANGELOG.md)
 - Combines Underscore’s PHP/JS files and Bootstrap’s HTML/CSS/JS.
 - Comes with Bootstrap (v4) Sass source files and additional .scss files. Nicely sorted and ready to add your own variables and customize the Bootstrap variables.
 - Uses a single minified CSS file for all the basic stuff.
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/) integration (v4.7.0)
+- [Font Awesome Pro](http://fortawesome.github.io/Font-Awesome/) integration (v4.7.0) (You will need a pro license to run npm install)
 - Jetpack ready.
 - WooCommerce support.
 - Contact Form 7 support.
-- [Child Theme](https://github.com/cdbootstrap/cdbootstrap-child) ready.
 - Translation ready.
 
 ## Starter Theme + HTML Framework = WordPress Theme Framework
@@ -65,28 +61,7 @@ Some basics about the Sass and CSS files that come with CDBootstrap:
   - Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
 
 ## Installation
-There are several ways to install CDBootstrap. We'll look at three of them: (1) classic install by uploading CDBootstrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
-
-### Classic install
-- Download the cdbootstrap folder from GitHub or from [https://cdbootstrap.com](https://cdbootstrap.com)
-- IMPORTANT: If you download it from GitHub make sure you rename the "cdbootstrap-master.zip" file just to "cdbootstrap.zip" or you might have problems using child themes!
-- Upload it into your WordPress installation theme subfolder: `/wp-content/themes/`
-- Login to your WordPress backend
-- Go to Appearance → Themes
-- Activate the CDBootstrap theme
-
-### npm install
-- Open your terminal
-- Change to the directory where you want to add CDBootstrap
-- Type `npm install cdbootstrap`
-
-### WordPress.org install
-- Open your WordPress backend
-- Click on "Appearance -> Themes"
-- Hit the "Add new" button
-- Search for "CDBootstrap"
-- Hit the "install" button
-- Activate the theme
+- In your terminal, navigate to your wp-content/themes directory and clone this project
 
 ## Developing With npm, Gulp and SASS and [Browser Sync][1]
 
@@ -95,24 +70,22 @@ There are several ways to install CDBootstrap. We'll look at three of them: (1) 
 - Then open your terminal and browse to the location of your CDBootstrap copy
 - Run: `$ npm install`
 
+- Change the browser-sync options to reflect your environment in the file `/webpack.mix.js` in the beginning of the file:
+```
+	.browserSync({
+		proxy: 'https://test.local',
+		files: [
+            'src/scss/*',
+            'src/js/*',
+            '*.php',
+            '*/*.php',
+        ]
+	});
+```
+
 ### Running
 To work with and compile your Sass files on the fly start:
-
-- `$ gulp watch`
-
-Or, to run with Browser-Sync:
-
-- First change the browser-sync options to reflect your environment in the file `/gulpconfig.json` in the beginning of the file:
-```javascript
-{
-    "browserSyncOptions" : {
-        "proxy": "localhost/theme_test/", // <----- CHANGE HERE
-        "notify": false
-    },
-    ...
-};
-```
-- then run: `$ gulp watch-bs`
+- run: `$ npm run watch`
 
 ## How to Use the Built-In Widget Slider
 

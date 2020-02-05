@@ -19,7 +19,7 @@
             Commits on Feb 19, 2019
             Lon Koenig
             Lon Koenig
-            Make cdbootstrap_mobile_web_app_meta() and cdbootstrap_pingback() plugg…
+            Make understrap_mobile_web_app_meta() and understrap_pingback() plugg…
             6fcf1e9
 
             Commits on Feb 22, 2019
@@ -47,7 +47,7 @@
             Commits on Mar 11, 2019
             @holger1411
             holger1411
-            Merge pull request #935 from cdbootstrap/MarieComet-responsive-embed-s…
+            Merge pull request #935 from understrap/MarieComet-responsive-embed-s…
             74b0d07
 
             Commits on Mar 20, 2019
@@ -374,7 +374,7 @@
               - Update prefixes
               - Remove automatically db updates by theme
               - Rename and streamline functions
-              - Changing WooCommerce text domain to "cdbootstrap"
+              - Changing WooCommerce text domain to "understrap"
               - Disable theme-settings.php call
               - Remove jQuery 3.2.1 slim and switch back to WP core jQuery version
               - Update Bootstrap 4 Beta 2 to commit which fixes jQuery conflict
@@ -410,7 +410,7 @@
 
 
             - ** Release 0.6.4.1 August 17h 2017 **
-              - Hot fix release - Rebuild new Bootstrap 4 Beta navbar markup into CDBootstrap
+              - Hot fix release - Rebuild new Bootstrap 4 Beta navbar markup into understrap
 
 
             - ** Release 0.6.3 August 14h 2017 **
