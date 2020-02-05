@@ -2,7 +2,7 @@
 /**
  * Declaring widgets
  *
- * @package understrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
@@ -14,9 +14,9 @@ defined( 'ABSPATH' ) || exit;
  *
  * @link https://developer.wordpress.org/reference/hooks/dynamic_sidebar_params/
  */
-add_filter( 'dynamic_sidebar_params', 'understrap_widget_classes' );
+add_filter( 'dynamic_sidebar_params', 'cdbootstrap_widget_classes' );
 
-if ( ! function_exists( 'understrap_widget_classes' ) ) {
+if ( ! function_exists( 'cdbootstrap_widget_classes' ) ) {
 	/**
 	 * Count number of visible widgets in a sidebar and add classes to widgets accordingly,
 	 * so widgets can be displayed one, two, three or four per row.
@@ -46,7 +46,7 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 	 * }
 	 * @return array $params
 	 */
-	function understrap_widget_classes( $params ) {
+	function cdbootstrap_widget_classes( $params ) {
 
 		global $sidebars_widgets;
 
@@ -86,20 +86,20 @@ if ( ! function_exists( 'understrap_widget_classes' ) ) {
 		return $params;
 
 	}
-} // endif function_exists( 'understrap_widget_classes' ).
+} // endif function_exists( 'cdbootstrap_widget_classes' ).
 
-add_action( 'widgets_init', 'understrap_widgets_init' );
+add_action( 'widgets_init', 'cdbootstrap_widgets_init' );
 
-if ( ! function_exists( 'understrap_widgets_init' ) ) {
+if ( ! function_exists( 'cdbootstrap_widgets_init' ) ) {
 	/**
 	 * Initializes themes widgets.
 	 */
-	function understrap_widgets_init() {
+	function cdbootstrap_widgets_init() {
 		register_sidebar(
 			array(
-				'name'          => __( 'Right Sidebar', 'understrap' ),
+				'name'          => __( 'Right Sidebar', 'cdbootstrap' ),
 				'id'            => 'right-sidebar',
-				'description'   => __( 'Right sidebar widget area', 'understrap' ),
+				'description'   => __( 'Right sidebar widget area', 'cdbootstrap' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -109,9 +109,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Left Sidebar', 'understrap' ),
+				'name'          => __( 'Left Sidebar', 'cdbootstrap' ),
 				'id'            => 'left-sidebar',
-				'description'   => __( 'Left sidebar widget area', 'understrap' ),
+				'description'   => __( 'Left sidebar widget area', 'cdbootstrap' ),
 				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 				'after_widget'  => '</aside>',
 				'before_title'  => '<h3 class="widget-title">',
@@ -121,9 +121,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Hero Slider', 'understrap' ),
+				'name'          => __( 'Hero Slider', 'cdbootstrap' ),
 				'id'            => 'hero',
-				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'understrap' ),
+				'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'cdbootstrap' ),
 				'before_widget' => '<div class="carousel-item">',
 				'after_widget'  => '</div>',
 				'before_title'  => '',
@@ -133,9 +133,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Hero Canvas', 'understrap' ),
+				'name'          => __( 'Hero Canvas', 'cdbootstrap' ),
 				'id'            => 'herocanvas',
-				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'understrap' ),
+				'description'   => __( 'Full size canvas hero area for Bootstrap and other custom HTML markup', 'cdbootstrap' ),
 				'before_widget' => '',
 				'after_widget'  => '',
 				'before_title'  => '',
@@ -145,9 +145,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Top Full', 'understrap' ),
+				'name'          => __( 'Top Full', 'cdbootstrap' ),
 				'id'            => 'statichero',
-				'description'   => __( 'Full top widget with dynamic grid', 'understrap' ),
+				'description'   => __( 'Full top widget with dynamic grid', 'cdbootstrap' ),
 				'before_widget' => '<div id="%1$s" class="static-hero-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .static-hero-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
@@ -157,9 +157,9 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 
 		register_sidebar(
 			array(
-				'name'          => __( 'Footer Full', 'understrap' ),
+				'name'          => __( 'Footer Full', 'cdbootstrap' ),
 				'id'            => 'footerfull',
-				'description'   => __( 'Full sized footer widget with dynamic grid', 'understrap' ),
+				'description'   => __( 'Full sized footer widget with dynamic grid', 'cdbootstrap' ),
 				'before_widget' => '<div id="%1$s" class="footer-widget %2$s dynamic-classes">',
 				'after_widget'  => '</div><!-- .footer-widget -->',
 				'before_title'  => '<h3 class="widget-title">',
@@ -168,4 +168,4 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 		);
 
 	}
-} // endif function_exists( 'understrap_widgets_init' ).
+} // endif function_exists( 'cdbootstrap_widgets_init' ).

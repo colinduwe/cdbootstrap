@@ -2,13 +2,13 @@
 /**
  * Left sidebar check
  *
- * @package understrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+$sidebar_pos = get_theme_mod( 'cdbootstrap_sidebar_position' );
 ?>
 
 <?php if ( 'left' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>

@@ -1,17 +1,23 @@
 {
-  "name": "understrap",
+  "name": "cdbootstrap",
   "version": "0.9.4",
   "description": "WordPress Theme framework",
   "main": "index.js",
   "scripts": {
-    "postinstall": "gulp copy-assets"
+    "postinstall": "gulp copy-assets",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "npm run development -- --watch",
+    "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "engines": {
     "npm": ">=2.1.8"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/holger1411/understrap.git"
+    "url": "https://github.com/colinduwe/cdbootstrap"
   },
   "keywords": [
     "wordpress",
@@ -20,18 +26,18 @@
     "bootstrap",
     "underscores"
   ],
-  "author": "Holger Koenemann",
+  "author": "Colin Duwe",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/holger1411/understrap/issues"
+    "url": "https://github.com/colinduwe/cdbootstrap/issues"
   },
-  "homepage": "https://understrap.com",
+  "homepage": "https://cdbootstrap.com",
   "dependencies": {
     "@babel/preset-env": "^7.4.5",
+    "@fortawesome/fontawesome-pro": "^5.12.0",
     "bootstrap": "^4.4.1",
     "browser-sync": "^2.26.7",
     "del": "^4.1.0",
-    "font-awesome": "^4.7.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^4.0.0",
@@ -48,13 +54,20 @@
     "gulp-touch-fd": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-watch": "^5.0.1",
+    "popper.js": "^1.16.1",
     "run-sequence": "^2.2.1",
     "undescores-for-npm": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "autoprefixer": "^9.5.1",
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "cross-env": "^7.0.0",
     "gulp-babel": "^8.0.0",
-    "gulp-postcss": "^8.0.0"
+    "gulp-postcss": "^8.0.0",
+    "laravel-mix": "^5.0.1",
+    "resolve-url-loader": "^3.1.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
   }
 }

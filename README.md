@@ -1,25 +1,25 @@
-[![Build Status](https://api.travis-ci.org/understrap/understrap.svg?branch=master)](https://travis-ci.org/understrap/understrap)
-[![Wordpress Theme Version](https://img.shields.io/wordpress/theme/v/understrap.svg)](https://wordpress.org/themes/understrap) 
-[![Wordpress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/understrap.svg)](https://wordpress.org/themes/understrap/) 
-[![Github Last Commit](https://img.shields.io/github/last-commit/understrap/understrap)](https://github.com/understrap/understrap/commits/master) 
+[![Build Status](https://api.travis-ci.org/cdbootstrap/cdbootstrap.svg?branch=master)](https://travis-ci.org/cdbootstrap/cdbootstrap)
+[![Wordpress Theme Version](https://img.shields.io/wordpress/theme/v/cdbootstrap.svg)](https://wordpress.org/themes/cdbootstrap) 
+[![Wordpress Theme Active Installs](https://img.shields.io/wordpress/theme/installs/cdbootstrap.svg)](https://wordpress.org/themes/cdbootstrap/) 
+[![Github Last Commit](https://img.shields.io/github/last-commit/cdbootstrap/cdbootstrap)](https://github.com/cdbootstrap/cdbootstrap/commits/master) 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
 
 # CDBootstrap WordPress Theme Framework
 
-Original Project: [https://understrap.com](https://understrap.com)
+Original Project: [https://cdbootstrap.com](https://cdbootstrap.com)
 
-Child Theme Project: [https://github.com/understrap/understrap-child](https://github.com/understrap/understrap-child)
+Child Theme Project: [https://github.com/cdbootstrap/cdbootstrap-child](https://github.com/cdbootstrap/cdbootstrap-child)
 
-OverStrap Child Themes: [https://understrap.com/overstrap/](https://understrap.com/overstrap/)
+OverStrap Child Themes: [https://cdbootstrap.com/overstrap/](https://cdbootstrap.com/overstrap/)
 
 ## About
 
-I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what UnderStrap is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for UnderStrap.
+I’m a huge fan of Underscores, Bootstrap, and Sass. Why not combine these into a solid WordPress Theme Framework? That’s what CDBootstrap is. You can use it as a starter theme and build your own theme on top of it. Or you can use it as a parent theme and create your own child theme for CDBootstrap.
 
 ## License
 CDBootstrap Wordpress Theme, Copyright 2020 Colin Duwe
-UnderStrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
-UnderStrap is distributed under the terms of the GNU GPL version 2
+CDBootstrap WordPress Theme, Copyright 2013-2018 Holger Koenemann
+CDBootstrap is distributed under the terms of the GNU GPL version 2
 
 http://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
 
@@ -36,7 +36,7 @@ See [changelog](CHANGELOG.md)
 - Jetpack ready.
 - WooCommerce support.
 - Contact Form 7 support.
-- [Child Theme](https://github.com/understrap/understrap-child) ready.
+- [Child Theme](https://github.com/cdbootstrap/cdbootstrap-child) ready.
 - Translation ready.
 
 ## Starter Theme + HTML Framework = WordPress Theme Framework
@@ -46,45 +46,45 @@ Why not add a well known and supported layout framework to have a solid, clean a
 
 ## Confused by All the CSS and Sass Files?
 
-Some basics about the Sass and CSS files that come with UnderStrap:
+Some basics about the Sass and CSS files that come with CDBootstrap:
 - The theme itself uses the `/style.css`file only to identify the theme inside of WordPress. The file is not loaded by the theme and does not include any styles.
 - The `/css/theme.css` and its minified little brother `/css/theme.min.css` file(s) provides all styles. It is composed of five different SCSS sets and one variable file at `/sass/theme.scss`:
 
- ```@import "theme/theme_variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+ ```@import "theme/theme_variables";  // 1. Add your variables into this file. Also add variables to overwrite Bootstrap or CDBootstrap variables here
  @import "../src/bootstrap-sass/assets/stylesheets/bootstrap";  // 2. All the Bootstrap stuff - Don´t edit this!
- @import "understrap/understrap"; // 3. Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
+ @import "cdbootstrap/cdbootstrap"; // 3. Some basic WordPress stylings and needed styles to combine Boostrap and Underscores
  @import "../src/fontawesome/scss/font-awesome"; // 4. Font Awesome Icon styles
  // Any additional imported files //
  @import "theme/theme";  // 5. Add your styles into this file
  ```
 
-- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update UnderStrap without overwriting your own work!
+- Don’t edit the number 2-4 files/filesets listed above or you won’t be able to update CDBootstrap without overwriting your own work!
 - Your design goes into: `/sass/theme`.
   - Add your styles to the `/sass/theme/_theme.scss` file
   - And your variables to the `/sass/theme/_theme_variables.scss`
   - Or add other .scss files into it and `@import` it into `/sass/theme/_theme.scss`.
 
 ## Installation
-There are several ways to install UnderStrap. We'll look at three of them: (1) classic install by uploading UnderStrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
+There are several ways to install CDBootstrap. We'll look at three of them: (1) classic install by uploading CDBootstrap to a WordPress install, (2) using npm, and (3) using the theme directory in WordPress.
 
 ### Classic install
-- Download the understrap folder from GitHub or from [https://understrap.com](https://understrap.com)
-- IMPORTANT: If you download it from GitHub make sure you rename the "understrap-master.zip" file just to "understrap.zip" or you might have problems using child themes!
+- Download the cdbootstrap folder from GitHub or from [https://cdbootstrap.com](https://cdbootstrap.com)
+- IMPORTANT: If you download it from GitHub make sure you rename the "cdbootstrap-master.zip" file just to "cdbootstrap.zip" or you might have problems using child themes!
 - Upload it into your WordPress installation theme subfolder: `/wp-content/themes/`
 - Login to your WordPress backend
 - Go to Appearance → Themes
-- Activate the UnderStrap theme
+- Activate the CDBootstrap theme
 
 ### npm install
 - Open your terminal
-- Change to the directory where you want to add UnderStrap
-- Type `npm install understrap`
+- Change to the directory where you want to add CDBootstrap
+- Type `npm install cdbootstrap`
 
 ### WordPress.org install
 - Open your WordPress backend
 - Click on "Appearance -> Themes"
 - Hit the "Add new" button
-- Search for "UnderStrap"
+- Search for "CDBootstrap"
 - Hit the "install" button
 - Activate the theme
 
@@ -92,7 +92,7 @@ There are several ways to install UnderStrap. We'll look at three of them: (1) c
 
 ### Installing Dependencies
 - Make sure you have installed Node.js and Browser-Sync (optional) on your computer globally
-- Then open your terminal and browse to the location of your UnderStrap copy
+- Then open your terminal and browse to the location of your CDBootstrap copy
 - Run: `$ npm install`
 
 ### Running
@@ -126,7 +126,7 @@ Add a new file to the themes root folder called rtl.css. Add all alignments to t
 https://codex.wordpress.org/Right_to_Left_Language_Support
 
 ## Page Templates
-UnderStrap includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
+CDBootstrap includes several different page template files: (1) blank template, (2) empty template, and (3) full width template.
 
 ### Blank Template
 

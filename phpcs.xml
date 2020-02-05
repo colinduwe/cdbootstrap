@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
-<ruleset name="UnderStrap Coding Standards">
+<ruleset name="CDBootstrap Coding Standards">
 
 	<!-- Set a description for this ruleset. -->
-	<description>A custom set of code standard rules for UnderStrap.</description>
+	<description>A custom set of code standard rules for CDBootstrap.</description>
 
 	<!-- Show colors in console -->
 	<arg value="-colors"/>
@@ -58,7 +58,7 @@
 	-->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="understrap"/>
+			<property name="text_domain" type="array" value="cdbootstrap"/>
 		</properties>
 	</rule>
 

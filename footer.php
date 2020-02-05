@@ -4,13 +4,13 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package understrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'cdbootstrap_container_type' );
 ?>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<?php understrap_site_info(); ?>
+						<?php cdbootstrap_site_info(); ?>
 
 					</div><!-- .site-info -->
 

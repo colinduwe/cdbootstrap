@@ -2,7 +2,7 @@
 /**
  * Hero setup
  *
- * @package understrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
