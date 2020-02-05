@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package UnderStrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<header class="page-header">
 
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'understrap' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'cdbootstrap' ); ?></h1>
 
 	</header><!-- .page-header -->
 

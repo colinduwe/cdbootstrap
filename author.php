@@ -4,14 +4,14 @@
  *
  * Learn more: https://codex.wordpress.org/Author_Templates
  *
- * @package UnderStrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
 get_header();
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'cdbootstrap_container_type' );
 ?>
 
 <div class="wrapper" id="author-wrapper">
@@ -28,14 +28,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<header class="page-header author-header">
 
 					<?php
-					if ( get_query_var( 'author_name' ) ) {
-						$curauth = get_user_by( 'slug', get_query_var( 'author_name' ) );
+					if ( isset( $_GET['author_name'] ) ) {
+						$curauth = get_user_by( 'slug', $author_name );
 					} else {
 						$curauth = get_userdata( intval( $author ) );
 					}
 					?>
 
-					<h1><?php echo esc_html__( 'About:', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
+					<h1><?php echo esc_html__( 'About:', 'cdbootstrap' ) . ' ' . esc_html( $curauth->nickname ); ?></h1>
 
 					<?php
 					if ( ! empty( $curauth->ID ) ) {
@@ -46,20 +46,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php if ( ! empty( $curauth->user_url ) || ! empty( $curauth->user_description ) ) : ?>
 						<dl>
 							<?php if ( ! empty( $curauth->user_url ) ) : ?>
-								<dt><?php esc_html_e( 'Website', 'understrap' ); ?></dt>
+								<dt><?php esc_html_e( 'Website', 'cdbootstrap' ); ?></dt>
 								<dd>
 									<a href="<?php echo esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a>
 								</dd>
 							<?php endif; ?>
 
 							<?php if ( ! empty( $curauth->user_description ) ) : ?>
-								<dt><?php esc_html_e( 'Profile', 'understrap' ); ?></dt>
-								<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
+								<dt><?php esc_html_e( 'Profile', 'cdbootstrap' ); ?></dt>
+								<dd><?php esc_html_e( $curauth->user_description, 'cdbootstrap' ); ?></dd>
 							<?php endif; ?>
 						</dl>
 					<?php endif; ?>
 
-					<h2><?php echo esc_html__( 'Posts by', 'understrap' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
+					<h2><?php echo esc_html( 'Posts by', 'cdbootstrap' ) . ' ' . esc_html( $curauth->nickname ); ?>:</h2>
 
 				</header><!-- .page-header -->
 					<!-- The Loop -->
@@ -90,7 +90,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			</main><!-- #main -->
 
 			<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
+			<?php cdbootstrap_pagination(); ?>
 
 			<!-- Do the right sidebar check -->
 			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>

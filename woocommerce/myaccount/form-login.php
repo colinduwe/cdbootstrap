@@ -28,7 +28,7 @@ $col = 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ? 6 :
 
 	<div class="u-column1 col-md-<?php echo (int) $col; ?>">
 
-		<h2><?php esc_html_e( 'Login', 'understrap' ); ?></h2>
+		<h2><?php esc_html_e( 'Login', 'cdbootstrap' ); ?></h2>
 
 		<form class="woocommerce-form woocommerce-form-login login" method="post">
 
@@ -53,7 +53,7 @@ $col = 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ? 6 :
 				<button type="submit" class="woocommerce-form-login__submit btn btn-outline-primary" name="login" value="<?php esc_attr_e( 'Log in', 'understrap' ); ?>"><?php esc_html_e( 'Log in', 'understrap' ); ?></button>
 			</p>
 			<p class="woocommerce-LostPassword lost_password">
-				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'understrap' ); ?></a>
+				<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'cdbootstrap' ); ?></a>
 			</p>
 
 			<?php do_action( 'woocommerce_login_form_end' ); ?>
@@ -66,7 +66,7 @@ $col = 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ? 6 :
 
 	<div class="u-column2 col-md-6">
 
-		<h2><?php esc_html_e( 'Register', 'understrap' ); ?></h2>
+		<h2><?php esc_html_e( 'Register', 'cdbootstrap' ); ?></h2>
 
 		<form method="post" class="woocommerce-form woocommerce-form-register register" <?php do_action( 'woocommerce_register_form_tag' ); ?> >
 
@@ -95,7 +95,7 @@ $col = 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ? 6 :
 
 			<?php else : ?>
 
-				<p><?php esc_html_e( 'A password will be sent to your email address.', 'understrap' ); ?></p>
+				<p><?php esc_html_e( 'A password will be sent to your email address.', 'cdbootstrap' ); ?></p>
 
 			<?php endif; ?>
 

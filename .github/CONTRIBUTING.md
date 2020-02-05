@@ -1,4 +1,4 @@
-# Contributing to the UnderStrap Project
+# Contributing to the CDBootstrap Project
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
 - Reporting a bug
@@ -23,8 +23,8 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 ## Any contributions you make will be under the GNU GPL version 2
 In short, when you submit code changes, your submissions are understood to be under the same [GNU GPL version 2](https://opensource.org/licenses/GPL-2.0) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-## Report bugs using Github's [issues](https://github.com/understrap/understrap/issues)
-We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/understrap/understrap/issues/new) - it's that easy!
+## Report bugs using Github's [issues](https://github.com/cdbootstrap/cdbootstrap/issues)
+We use GitHub issues to track public bugs. Report a bug by [opening a new issue](https://github.com/cdbootstrap/cdbootstrap/issues/new) - it's that easy!
 
 ## Write bug reports with detail, background, and sample code
 [This is an example](http://stackoverflow.com/q/12488905/180626) of a bug report I wrote, and I think it's not a bad model. Here's [another example from Craig Hockenberry](http://www.openradar.me/11905408), an app developer whom I greatly respect.

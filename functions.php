@@ -1,8 +1,8 @@
 <?php
 /**
- * UnderStrap functions and definitions
+ * CDBootstrap functions and definitions
  *
- * @package UnderStrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.

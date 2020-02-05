@@ -2,7 +2,7 @@
 /**
  * Blank content partial template
  *
- * @package UnderStrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.

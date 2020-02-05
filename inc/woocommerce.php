@@ -2,18 +2,18 @@
 /**
  * Add WooCommerce support
  *
- * @package UnderStrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-add_action( 'after_setup_theme', 'understrap_woocommerce_support' );
-if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
+add_action( 'after_setup_theme', 'cdbootstrap_woocommerce_support' );
+if ( ! function_exists( 'cdbootstrap_woocommerce_support' ) ) {
 	/**
 	 * Declares WooCommerce theme support.
 	 */
-	function understrap_woocommerce_support() {
+	function cdbootstrap_woocommerce_support() {
 		add_theme_support( 'woocommerce' );
 
 		// Add Product Gallery support.
@@ -31,16 +31,14 @@ if ( ! function_exists( 'understrap_woocommerce_support' ) ) {
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 
-// Then hook in your own functions to display the wrappers your theme requires.
-add_action( 'woocommerce_before_main_content', 'understrap_woocommerce_wrapper_start', 10 );
-add_action( 'woocommerce_after_main_content', 'understrap_woocommerce_wrapper_end', 10 );
-
-if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
-	/**
-	 * Display the theme specific start of the page wrapper.
-	 */
-	function understrap_woocommerce_wrapper_start() {
-		$container = get_theme_mod( 'understrap_container_type' );
+/**
+ * Then hook in your own functions to display the wrappers your theme requires
+ */
+add_action( 'woocommerce_before_main_content', 'cdbootstrap_woocommerce_wrapper_start', 10 );
+add_action( 'woocommerce_after_main_content', 'cdbootstrap_woocommerce_wrapper_end', 10 );
+if ( ! function_exists( 'cdbootstrap_woocommerce_wrapper_start' ) ) {
+	function cdbootstrap_woocommerce_wrapper_start() {
+		$container = get_theme_mod( 'cdbootstrap_container_type' );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 		echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';
@@ -48,12 +46,8 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 		echo '<main class="site-main" id="main">';
 	}
 }
-
-if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
-	/**
-	 * Display the theme specific end of the page wrapper.
-	 */
-	function understrap_woocommerce_wrapper_end() {
+if ( ! function_exists( 'cdbootstrap_woocommerce_wrapper_end' ) ) {
+	function cdbootstrap_woocommerce_wrapper_end() {
 		echo '</main><!-- #main -->';
 		get_template_part( 'global-templates/right-sidebar-check' );
 		echo '</div><!-- .row -->';
@@ -62,18 +56,19 @@ if ( ! function_exists( 'understrap_woocommerce_wrapper_end' ) ) {
 	}
 }
 
-if ( ! function_exists( 'understrap_wc_form_field_args' ) ) {
-	/**
-	 * Filter hook function monkey patching form classes
-	 * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
-	 *
-	 * @param string $args Form attributes.
-	 * @param string $key Not in use.
-	 * @param null   $value Not in use.
-	 *
-	 * @return mixed
-	 */
-	function understrap_wc_form_field_args( $args, $key, $value = null ) {
+
+/**
+ * Filter hook function monkey patching form classes
+ * Author: Adriano Monecchi http://stackoverflow.com/a/36724593/307826
+ *
+ * @param string $args Form attributes.
+ * @param string $key Not in use.
+ * @param null   $value Not in use.
+ *
+ * @return mixed
+ */
+if ( ! function_exists( 'cdbootstrap_wc_form_field_args' ) ) {
+	function cdbootstrap_wc_form_field_args( $args, $key, $value = null ) {
 		// Start field type switch case.
 		switch ( $args['type'] ) {
 			// Targets all select input type elements, except the country and state select input types.

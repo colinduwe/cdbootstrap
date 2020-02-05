@@ -44,7 +44,26 @@
 # Dependencies
 bower_components
 node_modules
-vendor
+
+cdbootstrap.zip
+
+dist
+
+dist-product
+
+npm-debug.log
+
+/vendor/
+
+.DS_Store
+
+Thumbs.db
+
+.svn
+
+.cvs
+
+*.bak
 
 # Other UnderStrap specific files and directories
 phpcs.xml

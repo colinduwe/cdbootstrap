@@ -2,7 +2,7 @@
 /**
  * Right sidebar check
  *
- * @package UnderStrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
@@ -11,9 +11,10 @@ defined( 'ABSPATH' ) || exit;
 
 </div><!-- #closing the primary container from /global-templates/left-sidebar-check.php -->
 
-<?php
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
+<?php $sidebar_pos = get_theme_mod( 'cdbootstrap_sidebar_position' ); ?>
 
-if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) {
-	get_template_part( 'sidebar-templates/sidebar', 'right' );
-}
+<?php if ( 'right' === $sidebar_pos || 'both' === $sidebar_pos ) : ?>
+
+	<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+
+<?php endif;

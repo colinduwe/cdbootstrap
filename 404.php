@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (not found)
  *
- * @package UnderStrap
+ * @package cdbootstrap
  */
 
 // Exit if accessed directly.
@@ -10,7 +10,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-$container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'cdbootstrap_container_type' );
 ?>
 
 <div class="wrapper" id="error-404-wrapper">
@@ -27,23 +27,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<header class="page-header">
 
-							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'understrap' ); ?></h1>
+							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'cdbootstrap' ); ?></h1>
 
 						</header><!-- .page-header -->
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'understrap' ); ?></p>
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'cdbootstrap' ); ?></p>
 
 							<?php get_search_form(); ?>
 
 							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-							<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+							<?php if ( cdbootstrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 
 								<div class="widget widget_categories">
 
-									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'understrap' ); ?></h2>
+									<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'cdbootstrap' ); ?></h2>
 
 									<ul>
 										<?php
@@ -66,7 +66,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php
 
 							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
+							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'cdbootstrap' ), convert_smilies( ':)' ) ) . '</p>';
 							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
 							the_widget( 'WP_Widget_Tag_Cloud' );
