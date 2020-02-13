@@ -41,16 +41,18 @@ mix.webpackConfig({
 
 mix.js('src/js/app.js', 'dist/js/')
 	.js('src/js/customizer.js', 'dist/js/')
+	.js('src/js/editor.js', 'dist/js/')
 	.sass('src/scss/app.scss', 'dist/css/')
 	.sass('src/scss/editor.scss', 'dist/css/')
+	.copy('node_modules/@fortawesome/fontawesome-pro/webfonts', 'dist/fonts')
 	.version()
 	.sourceMaps(true, 'inline-source-map')
 	.setPublicPath('dist')
 	.browserSync({
 		proxy: 'https://test.local',
 		files: [
-            'src/scss/*',
-            'src/js/*',
+            'dist/css/*',
+            'dist/js/*',
             '*.php',
             '*/*.php',
         ]
