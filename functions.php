@@ -22,7 +22,8 @@ $cdbootstrap_includes = array(
 	'/jetpack.php',                         // Load Jetpack compatibility file.
 	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/cdbootstrap/cdbootstrap/issues/567
 	'/woocommerce.php',                     // Load WooCommerce functions.
-	'/editor.php',                          // Load Editor functions.
+	'/editor.php',							// Load Gutenberg Editor functions.
+	'/tinymce.php',                         // Load TinyMCE Editor functions.
 	'/deprecated.php',                      // Load deprecated functions.
 );
 

@@ -5,6 +5,13 @@
 
 // Optional files - If you dont use the corresponding scripts/fonts comment em out
 @import "~@fortawesome/fontawesome-pro/scss/fontawesome";    // <-------- Font Awesome Pro Icon font
+@import "~@fortawesome/fontawesome-pro/scss/regular";
+@import "~@fortawesome/fontawesome-pro/scss/solid";
+@import "~@fortawesome/fontawesome-pro/scss/brands";
+
+// Global
+@import "global/colors";
+@import "global/layout";
 
 // Compontents
 //@import "components/captions";
