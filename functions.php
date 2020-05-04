@@ -25,6 +25,8 @@ $cdbootstrap_includes = array(
 	'/editor.php',							// Load Gutenberg Editor functions.
 	'/tinymce.php',                         // Load TinyMCE Editor functions.
 	'/deprecated.php',                      // Load deprecated functions.
+	//'/class-kirki-installer-section.php',	// Require Kirki plugin
+	'/advanced-custom-fields.php'			// Advanced Custom Field Support
 );
 
 foreach ( $cdbootstrap_includes as $file ) {
