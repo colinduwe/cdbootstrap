@@ -102,10 +102,10 @@ if ( ! function_exists( 'kirki_installer_register' ) ) {
 				protected function install_button() {
 					?>
 					<p style="text-align:left;margin-top:0;">
-						<?php esc_html_e( 'Please install the Kirki plugin to take full advantage of this theme\'s customizer capabilities', 'kirki' ); ?>
+						<?php esc_html_e( 'Please install the Kirki plugin to take full advantage of this theme\'s customizer capabilities', 'cdbootstrap' ); ?>
 					</p>
-					<a class="install-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( $this->get_plugin_install_url() ); ?>" aria-label="<?php esc_attr_e( 'Install Kirki Toolkit now', 'kirki' ); ?>" data-name="Kirki Toolkit">
-						<?php esc_html_e( 'Install Now', 'kirki' ); ?>
+					<a class="install-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( $this->get_plugin_install_url() ); ?>" aria-label="<?php esc_attr_e( 'Install Kirki Toolkit now', 'cdbootstrap' ); ?>" data-name="Kirki Toolkit">
+						<?php esc_html_e( 'Install Now', 'cdbootstrap' ); ?>
 					</a>
 					<?php
 				}
@@ -119,10 +119,10 @@ if ( ! function_exists( 'kirki_installer_register' ) ) {
 				protected function activate_button() {
 					?>
 					<p style="text-align:left;margin-top:0;">
-						<?php esc_html_e( 'You have installed Kirki. Activate it to take advantage of this theme\'s features in the customizer.', 'kirki' ); ?>
+						<?php esc_html_e( 'You have installed Kirki. Activate it to take advantage of this theme\'s features in the customizer.', 'cdbootstrap' ); ?>
 					</p>
-					<a class="activate-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( self_admin_url( 'plugins.php' ) ); ?>" aria-label="<?php esc_attr_e( 'Activate Kirki Toolkit now', 'kirki' ); ?>" data-name="Kirki Toolkit">
-						<?php esc_html_e( 'Activate Now', 'kirki' ); ?>
+					<a class="activate-now button-primary button" data-slug="kirki" href="<?php echo esc_url_raw( self_admin_url( 'plugins.php' ) ); ?>" aria-label="<?php esc_attr_e( 'Activate Kirki Toolkit now', 'cdbootstrap' ); ?>" data-name="Kirki Toolkit">
+						<?php esc_html_e( 'Activate Now', 'cdbootstrap' ); ?>
 					</a>
 					<?php
 				}
@@ -141,8 +141,8 @@ if ( ! function_exists( 'kirki_installer_register' ) ) {
 					// Show confirmation dialog on dismiss?
 					$show_confirm = true;
 					?>
-					<a class="kirki-installer-dismiss button-secondary button" data-slug="kirki" href="#" aria-label="<?php esc_attr_e( 'Don\'t show this again', 'kirki' ); ?>" data-name="<?php esc_attr_e( 'Dismiss', 'kirki' ); ?>">
-						<?php esc_html_e( 'Don\'t show this again', 'kirki' ); ?>
+					<a class="kirki-installer-dismiss button-secondary button" data-slug="kirki" href="#" aria-label="<?php esc_attr_e( 'Don\'t show this again', 'cdbootstrap' ); ?>" data-name="<?php esc_attr_e( 'Dismiss', 'cdbootstrap' ); ?>">
+						<?php esc_html_e( 'Don\'t show this again', 'cdbootstrap' ); ?>
 					</a>
 
 					<script type="text/javascript">
@@ -152,7 +152,7 @@ if ( ! function_exists( 'kirki_installer_register' ) ) {
 							event.preventDefault();
 
 							<?php if ( $show_confirm ) : ?>
-								if ( ! confirm( '<?php esc_html_e( 'Are you sure? Dismissing this message will hide the installation recommendation and you will have to manually install and activate the plugin in the future.', 'kirki' ); ?>' ) ) {
+								if ( ! confirm( '<?php esc_html_e( 'Are you sure? Dismissing this message will hide the installation recommendation and you will have to manually install and activate the plugin in the future.', 'cdbootstrap' ); ?>' ) ) {
 									return;
 								}
 							<?php endif; ?>

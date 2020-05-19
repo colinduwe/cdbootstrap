@@ -152,33 +152,33 @@ if ( ! function_exists( 'cdbootstrap_customize_preview_js' ) ) {
 }
 add_action( 'customize_preview_init', 'cdbootstrap_customize_preview_js' );
 
-if( class_exists( 'Kirki' ) ){
+if ( class_exists( 'Kirki' ) ) {
 	Kirki::add_config( 'theme_config_id', array(
 		'capability'    => 'edit_theme_options',
 		'option_type'   => 'theme_mod',
 	) );
 	Kirki::add_panel( 'panel_id', array(
 	    'priority'    => 10,
-	    'title'       => esc_html__( 'My Panel', 'kirki' ),
-	    'description' => esc_html__( 'My panel description', 'kirki' ),
+	    'title'       => esc_html__( 'My Panel', 'cdbootstrap' ),
+	    'description' => esc_html__( 'My panel description', 'cdbootstrap' ),
 	) );
 	Kirki::add_section( 'section_id', array(
-	    'title'          => esc_html__( 'My Section', 'kirki' ),
-	    'description'    => esc_html__( 'My section description.', 'kirki' ),
+	    'title'          => esc_html__( 'My Section', 'cdbootstrap' ),
+	    'description'    => esc_html__( 'My section description.', 'cdbootstrap' ),
 	    'panel'          => 'panel_id',
 	    'priority'       => 160,
 	) );
 	Kirki::add_field( 'theme_config_id', [
 		'type'        => 'radio',
 		'settings'    => 'my_setting',
-		'label'       => esc_html__( 'Radio Control', 'kirki' ),
+		'label'       => esc_html__( 'Radio Control', 'cdbootstrap' ),
 		'section'     => 'section_id',
 		'default'     => 'red',
 		'priority'    => 10,
 		'choices'     => [
-			'red'   => esc_html__( 'Red', 'kirki' ),
-			'green' => esc_html__( 'Green', 'kirki' ),
-			'blue'  => esc_html__( 'Blue', 'kirki' ),
+			'red'   => esc_html__( 'Red', 'cdbootstrap' ),
+			'green' => esc_html__( 'Green', 'cdbootstrap' ),
+			'blue'  => esc_html__( 'Blue', 'cdbootstrap' ),
 		],
-	] );			
+	] );
 }

@@ -90,7 +90,8 @@ if ( ! function_exists( 'cdbootstrap_entry_footer' ) ) {
  */
 if ( ! function_exists( 'cdbootstrap_categorized_blog' ) ) {
 	function cdbootstrap_categorized_blog() {
-		if ( false === ( $all_the_cool_cats = get_transient( 'cdbootstrap_categories' ) ) ) {
+		$all_the_cool_cats = get_transient( 'cdbootstrap_categories' );
+		if ( false === $all_the_cool_cats ) {
 			// Create an array of all the categories that are attached to posts.
 			$all_the_cool_cats = get_categories(
 				array(

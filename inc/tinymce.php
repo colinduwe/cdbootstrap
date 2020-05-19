@@ -24,7 +24,7 @@ add_filter( 'mce_buttons_2', 'cdbootstrap_tiny_mce_style_formats' );
 if ( ! function_exists( 'cdbootstrap_tiny_mce_style_formats' ) ) {
 	/**
 	 * Reveals TinyMCE's hidden Style dropdown.
-	 * 
+	 *
 	 * @param array $buttons Array of Tiny MCE's button ids.
 	 * @return array
 	 */
