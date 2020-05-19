@@ -1,4 +1,4 @@
-[![Github Last Commit](https://img.shields.io/github/last-commit/cdbootstrap/cdbootstrap)](https://github.com/colinduwe/cdbootstrap) 
+[![Github Last Commit](https://img.shields.io/github/last-commit/colinduwe/cdbootstrap)](https://github.com/colinduwe/cdbootstrap/commits/master) 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0)
 
 # CDBootstrap WordPress Theme Framework

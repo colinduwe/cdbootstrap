@@ -41,7 +41,6 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
-
 						/*
 						 * Include the Post-Format-specific template for the content.
 						 * If you want to override this in a child theme, then include a file
