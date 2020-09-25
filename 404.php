@@ -15,7 +15,7 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 
 <div class="wrapper" id="error-404-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
 		<div class="row">
 
