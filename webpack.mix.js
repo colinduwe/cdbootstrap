@@ -43,8 +43,15 @@ mix.js('src/js/app.js', 'dist/js/')
 	.js('src/js/customizer.js', 'dist/js/')
 	.js('src/js/editor.js', 'dist/js/')
 	.sass('src/scss/app.scss', 'dist/css/')
+		.options({
+			processCssUrls: false
+		})
 	.sass('src/scss/editor.scss', 'dist/css/')
+		.options({
+			processCssUrls: false
+		})
 	.copy('node_modules/@fortawesome/fontawesome-pro/webfonts', 'dist/fonts')
+	.copy('src/fonts', 'dist/fonts' )
 	.version()
 	.sourceMaps(true, 'inline-source-map')
 	.setPublicPath('dist')

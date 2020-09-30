@@ -1,11 +1,66 @@
-@charset 'utf-8';
+// Required Bootstrap files
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
-@import 'variables';
+// Theme variable overrides
+@import "variables";
 
-@import "~bootstrap/scss/bootstrap";      // <-------- Loads Bootstrap4
+// Option Bootstrap files
+//@import "~bootstrap/scss/root";
+//@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+//@import "~bootstrap/scss/code";
+//@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/tables";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+//@import "~bootstrap/scss/transitions";
+//@import "~bootstrap/scss/dropdown";
+//@import "~bootstrap/scss/button-group";
+//@import "~bootstrap/scss/input-group";
+//@import "~bootstrap/scss/custom-forms";
+//@import "~bootstrap/scss/nav";
+//@import "~bootstrap/scss/navbar";
+//@import "~bootstrap/scss/card";
+//@import "~bootstrap/scss/breadcrumb";
+//@import "~bootstrap/scss/pagination";
+//@import "~bootstrap/scss/badge";
+//@import "~bootstrap/scss/jumbotron";
+//@import "~bootstrap/scss/alert";
+//@import "~bootstrap/scss/progress";
+//@import "~bootstrap/scss/media";
+//@import "~bootstrap/scss/list-group";
+//@import "~bootstrap/scss/close";
+//@import "~bootstrap/scss/toasts";
+//@import "~bootstrap/scss/modal";
+//@import "~bootstrap/scss/tooltip";
+//@import "~bootstrap/scss/popover";
+//@import "~bootstrap/scss/carousel";
+//@import "~bootstrap/scss/spinners";
+@import "~bootstrap/scss/utilities";
+//@import "~bootstrap/scss/print";
+
 @import "understrap/understrap";  // <-------- Loads the CDBootstrap defaults. Just a few classes to incorporate BS in WP
+@import "understrap/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
 
+// Optional files - If you dont use the corresponding scripts/fonts comment em out
 @import "~@fortawesome/fontawesome-pro/scss/fontawesome";    // <-------- Font Awesome Pro Icon font
 @import "~@fortawesome/fontawesome-pro/scss/regular";
 @import "~@fortawesome/fontawesome-pro/scss/solid";
 @import "~@fortawesome/fontawesome-pro/scss/brands";
+
+// Global
+@import "global/colors";
+@import "global/layout";
+@import "global/type";
+
+// Compontents
+//@import "components/captions";
+@import "components/galleries";
+@import "components/buttons";
+//@import "components/media";
+
+// Any additional imported files //
+//@import "foobar";    // <-------- Whatever you want
