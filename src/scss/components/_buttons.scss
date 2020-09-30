@@ -1,0 +1,16 @@
+.wp-block-button.is-style-fill-chevron .wp-block-button__link:after{
+	content: "\f054";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    padding-left: 1rem;
+    &:hover{
+	    text-decoration: none;
+    }
+}
+
+.wp-block-button{
+	transition: $global-transistion;
+	a:hover{
+		text-decoration: none;
+	}	
+}
