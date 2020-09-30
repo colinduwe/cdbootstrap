@@ -1,4 +1,10 @@
-.wp-block-button.is-style-fill-chevron .wp-block-button__link:after{
+.wp-block-button__link{
+	//transition: $global-transistion;
+	@extend .btn;	
+}
+
+.wp-block-button.is-style-fill-chevron .wp-block-button__link:after,
+.wp-block-button.is-style-outline-chevron .wp-block-button__link:after{
 	content: "\f054";
     font-family: "Font Awesome 5 Pro";
     font-weight: 400;
@@ -8,9 +14,16 @@
     }
 }
 
-.wp-block-button{
-	transition: $global-transistion;
-	a:hover{
-		text-decoration: none;
-	}	
+@each $name, $color in $theme-colors {
+	
+	.is-style-outline .wp-block-button__link.has-#{$name}-color,
+	.is-style-outline-chevron .wp-block-button__link.has-#{$name}-color{
+		@extend .btn-outline-#{$name};
+	}
+	
 }
+
+.is-style-outline-chevron .wp-block-button__link:not(:hover){
+	background-color: transparent !important;
+}
+
