@@ -33,6 +33,10 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+				
+				<header class="entry-header">
+					<h1 class="entry-title"><?php single_post_title(); ?></h1>
+				</header>
 
 				<?php if ( have_posts() ) : ?>
 

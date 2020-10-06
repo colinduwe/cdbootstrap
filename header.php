@@ -57,7 +57,7 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 						the_custom_logo();
 					} ?><!-- end custom logo -->
 
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'cdbootstrap' ); ?>">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'cdbootstrap' ); ?>">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
@@ -65,7 +65,7 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 				<?php wp_nav_menu(
 					array(
 						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
+						'container_class' => 'navbarNavDropdown collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
 						'menu_class'      => 'navbar-nav ml-auto',
 						'fallback_cb'     => '',
@@ -74,6 +74,24 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+				
+				<div id="header-search-wrap" class="header-search-wrap navbarNavDropdown collapse">
+					<div>
+						<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
+							<label class="sr-only" for="s"><?php esc_html_e( 'Search', 'cdbootstrap' ); ?></label>
+							<div class="input-group">
+								<input class="field form-control" id="s" name="s" type="text"
+									placeholder="<?php esc_attr_e( 'Search &hellip;', 'cdbootstrap' ); ?>" value="<?php the_search_query(); ?>">
+								<span class="input-group-append">
+									<button type="submit" class="submit btn btn-primary" id="searchsubmit" name="submit">
+										<span class="screen-reader-text"><?php esc_attr_e( 'Search', 'cdbootstrap' ); ?></span><i class="far fa-search"></i></button>
+									<a href="#" role="button" aria-expanded="false" aria-controls="header-search-wrap" class="toggle-header-search close btn btn-secondary"><span class="screen-reader-text"><?php _e( 'Hide Search', 'cdbootstrap' ); ?></span><i class="fal fa-times"></i></a>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+				
 			<?php if ( 'container' === $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

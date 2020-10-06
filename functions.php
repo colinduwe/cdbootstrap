@@ -27,6 +27,7 @@ $cdbootstrap_includes = array(
 	'/deprecated.php',                      // Load deprecated functions.
 	// '/class-kirki-installer-section.php', // Require Kirki plugin
 	'/advanced-custom-fields.php',			// Advanced Custom Field Support
+	'/search.php',							// Search functions like the search in the primary nav
 );
 
 foreach ( $cdbootstrap_includes as $file ) {

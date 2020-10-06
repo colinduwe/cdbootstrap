@@ -15,8 +15,8 @@ defined( 'ABSPATH' ) || exit;
 		<input class="field form-control" id="s" name="s" type="text"
 			placeholder="<?php esc_attr_e( 'Search &hellip;', 'cdbootstrap' ); ?>" value="<?php the_search_query(); ?>">
 		<span class="input-group-append">
-			<input class="submit btn btn-primary" id="searchsubmit" name="submit" type="submit"
-			value="<?php esc_attr_e( 'Search', 'cdbootstrap' ); ?>">
+			<button type="submit" class="submit btn btn-primary" id="searchsubmit" name="submit">
+				<span class="screen-reader-text"><?php esc_attr_e( 'Search', 'cdbootstrap' ); ?></span><i class="far fa-search"></i></button>
 		</span>
 	</div>
 </form>
