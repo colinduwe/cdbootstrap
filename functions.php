@@ -28,6 +28,7 @@ $understrap_includes = array(
 	'/deprecated.php',                      // Load deprecated functions.
 	// '/class-kirki-installer-section.php', // Require Kirki plugin
 	'/advanced-custom-fields.php',			// Advanced Custom Field Support
+	'/search.php',							// Search functions like the search in the primary nav
 );
 
 // Load WooCommerce functions if WooCommerce is activated.
