@@ -2,7 +2,7 @@
 /**
  * CDBootstrap functions and definitions
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.
