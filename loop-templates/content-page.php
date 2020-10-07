@@ -2,7 +2,7 @@
 /**
  * Partial template for content in page.php
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * The template for displaying search forms
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

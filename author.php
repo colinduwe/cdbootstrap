@@ -4,7 +4,7 @@
  *
  * Learn more: https://codex.wordpress.org/Author_Templates
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

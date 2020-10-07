@@ -2,7 +2,7 @@
 /**
  * CDBootstrap Advanced Custom Field Integration
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

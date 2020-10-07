@@ -2,7 +2,7 @@
 /**
  * Sidebar setup for footer full
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

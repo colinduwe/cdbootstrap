@@ -2,7 +2,7 @@
 /**
  * Search related functions
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
  
 add_filter('wp_nav_menu_items', 'cdbootstrap_add_search_trigger', 10, 2);

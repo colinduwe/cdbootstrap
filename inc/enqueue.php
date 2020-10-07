@@ -2,7 +2,7 @@
 /**
  * CDBootstrap enqueue scripts
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

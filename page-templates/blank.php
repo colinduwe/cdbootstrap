@@ -4,7 +4,7 @@
  *
  * Template for displaying a blank page.
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

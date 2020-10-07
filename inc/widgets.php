@@ -2,7 +2,7 @@
 /**
  * Declaring widgets
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

@@ -2,11 +2,7 @@
 /**
  * Custom header setup
  *
-<<<<<<< HEAD
- * @package UnderStrap
-=======
- * @package cdbootstrap
->>>>>>> initial commit after forking and configuring Understrap into CDBootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.
@@ -14,16 +10,8 @@ defined( 'ABSPATH' ) || exit;
 
 add_action( 'after_setup_theme', 'cdbootstrap_custom_header_setup' );
 
-<<<<<<< HEAD
-if ( ! function_exists( 'understrap_custom_header_setup' ) ) {
-	/**
-	 * Set up custom header feature.
-	 */
-	function understrap_custom_header_setup() {
-=======
 if ( ! function_exists( 'cdbootstrap_custom_header_setup' ) ) {
 	function cdbootstrap_custom_header_setup() {
->>>>>>> initial commit after forking and configuring Understrap into CDBootstrap
 
 		/**
 		 * Filter CDBootstrap custom-header support arguments.

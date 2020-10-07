@@ -2,7 +2,7 @@
 /**
  * Custom hooks
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.
@@ -38,7 +38,7 @@ if ( ! function_exists( 'cdbootstrap_add_site_info' ) ) {
 				/* translators:*/
 				esc_html__( 'Theme: %1$s by %2$s.', 'cdbootstrap' ),
 				$the_theme->get( 'Name' ),
-				'<a href="' . esc_url( __( 'http://cdbootstrap.com', 'cdbootstrap' ) ) . '">cdbootstrap.com</a>'
+				'<a href="' . esc_url( $the_theme->get( 'AuthorURI' ) ) . '">' . $the_theme->get( 'Author' ) . '</a>'
 			),
 			sprintf( // WPCS: XSS ok.
 				/* translators:*/

@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * CDBootstrap modify Gutenberg editor
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 if ( ! function_exists( 'cdbootstrap_setup_theme_supported_features' ) ) {
