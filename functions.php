@@ -2,7 +2,7 @@
 /**
  * CDBootstrap functions and definitions
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.
@@ -20,7 +20,7 @@ $cdbootstrap_includes = array(
 	'/customizer.php',                      // Customizer additions.
 	'/custom-comments.php',                 // Custom Comments file.
 	'/jetpack.php',                         // Load Jetpack compatibility file.
-	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/cdbootstrap/cdbootstrap/issues/567
+	'/class-wp-bootstrap-navwalker.php',    // Load custom WordPress nav walker. Trying to get deeper navigation? Check out: https://github.com/understrap/understrap/issues/567.
 	'/woocommerce.php',                     // Load WooCommerce functions.
 	'/editor.php',							// Load Gutenberg Editor functions.
 	'/tinymce.php',                         // Load TinyMCE Editor functions.
