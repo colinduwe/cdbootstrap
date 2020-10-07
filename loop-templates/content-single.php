@@ -2,7 +2,7 @@
 /**
  * Single post partial template
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

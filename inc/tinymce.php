@@ -2,7 +2,7 @@
 /**
  * CDBootstrap modify TinyMCE editor
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

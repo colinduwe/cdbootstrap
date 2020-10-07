@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

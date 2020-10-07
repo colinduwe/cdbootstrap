@@ -2,7 +2,7 @@
 /**
  * Custom header setup
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * The right sidebar containing the main widget area
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

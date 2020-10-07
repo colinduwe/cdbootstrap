@@ -2,7 +2,7 @@
 /**
  * Check and setup theme's default settings
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

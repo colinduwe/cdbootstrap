@@ -2,7 +2,7 @@
 /**
  * Right sidebar check
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.

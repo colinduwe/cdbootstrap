@@ -2,7 +2,7 @@
 /**
  * Search results partial template
  *
- * @package cdbootstrap
+ * @package CDBootstrap
  */
 
 // Exit if accessed directly.
