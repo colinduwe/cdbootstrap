@@ -8,11 +8,11 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
-// UnderStrap's includes directory.
-$understrap_inc_dir = get_template_directory() . '/inc';
+// CDBootstrap's includes directory.
+$cdbootstrap_inc_dir = get_template_directory() . '/inc';
 
 // Array of files to include.
-$understrap_includes = array(
+$cdbootstrap_includes = array(
 	'/theme-settings.php',                  // Initialize theme default settings.
 	'/setup.php',                           // Theme setup and custom theme supports.
 	'/widgets.php',                         // Register widget area.
@@ -33,15 +33,15 @@ $understrap_includes = array(
 
 // Load WooCommerce functions if WooCommerce is activated.
 if ( class_exists( 'WooCommerce' ) ) {
-	$understrap_includes[] = '/woocommerce.php';
+	$cdbootstrap_includes[] = '/woocommerce.php';
 }
 
 // Load Jetpack compatibility file if Jetpack is activiated.
 if ( class_exists( 'Jetpack' ) ) {
-	$understrap_includes[] = '/jetpack.php';
+	$cdbootstrap_includes[] = '/jetpack.php';
 }
 
 // Include files.
-foreach ( $understrap_includes as $file ) {
-	require_once $understrap_inc_dir . $file;
+foreach ( $cdbootstrap_includes as $file ) {
+	require_once $cdbootstrap_inc_dir . $file;
 }

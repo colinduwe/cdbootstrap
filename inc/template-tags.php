@@ -109,7 +109,7 @@ if ( ! function_exists( 'cdbootstrap_categorized_blog' ) ) {
 			// This blog has more than 1 category so cdbootstrap_categorized_blog should return true.
 			return true;
 		}
-		// This blog has only 1 category so understrap_categorized_blog should return false.
+		// This blog has only 1 category so cdbootstrap_categorized_blog should return false.
 		return false;
 	}
 }

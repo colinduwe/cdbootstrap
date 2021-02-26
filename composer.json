@@ -27,7 +27,7 @@
 		"lint:php": ["@php ./vendor/bin/parallel-lint --exclude .git --exclude vendor ."]
 	},
 	"support": {
-		"issues": "https://github.com/understrap/understrap/issues",
-		"source": "https://github.com/understrap/understrap"
+		"issues": "https://github.com/colinduwe/cdbootstrap/issues",
+		"source": "https://github.com/colinduwe/cdbootstrap"
 	}
 }

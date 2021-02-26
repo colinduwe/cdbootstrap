@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<ruleset name="UnderStrap Coding Standards">
+<ruleset name="CDBootstrap Coding Standards">
 
-	<description>Apply WordPress Coding Standards to UnderStrap</description>
+	<description>Apply WordPress Coding Standards to CDBootstrap</description>
 
 	<!-- Whenever possible, cache the scan results and re-use those for unchanged files on the next scan. -->
 	<arg name="cache" value=".phpcs-cache"/>
@@ -41,7 +41,7 @@
 	-->
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="understrap"/>
+			<property name="text_domain" type="array" value="cdbootstrap"/>
 		</properties>
 	</rule>
 

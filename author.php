@@ -72,11 +72,11 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 								printf(
 									'<a rel="bookmark" href="%1$s" title="%2$s %3$s">%3$s</a>',
 									esc_url( apply_filters( 'the_permalink', get_permalink( $post ), $post ) ),
-									esc_attr( __( 'Permanent Link:', 'understrap' ) ),
+									esc_attr( __( 'Permanent Link:', 'cdbootstrap' ) ),
 									get_the_title()
 								);
-								understrap_posted_on();
-								esc_html_e( 'in', 'understrap' );
+								cdbootstrap_posted_on();
+								esc_html_e( 'in', 'cdbootstrap' );
 								the_category( '&' );
 							echo '</li>';
 						}

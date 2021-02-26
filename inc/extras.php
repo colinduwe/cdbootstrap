@@ -34,12 +34,12 @@ if ( ! function_exists( 'cdbootstrap_body_classes' ) ) {
 	}
 }
 
-if ( function_exists( 'understrap_adjust_body_class' ) ) {
+if ( function_exists( 'cdbootstrap_adjust_body_class' ) ) {
 	/*
-	 * understrap_adjust_body_class() deprecated in v0.9.4. We keep adding the
-	 * filter for child themes which use their own understrap_adjust_body_class.
+	 * cdbootstrap_adjust_body_class() deprecated in v0.9.4. We keep adding the
+	 * filter for child themes which use their own cdbootstrap_adjust_body_class.
 	 */
-	add_filter( 'body_class', 'understrap_adjust_body_class' );
+	add_filter( 'body_class', 'cdbootstrap_adjust_body_class' );
 }
 
 // Filter custom logo with correct classes.
@@ -131,19 +131,19 @@ if ( ! function_exists( 'cdbootstrap_default_body_attributes' ) ) {
 		return $atts;
 	}
 }
-add_filter( 'understrap_body_attributes', 'understrap_default_body_attributes' );
+add_filter( 'cdbootstrap_body_attributes', 'cdbootstrap_default_body_attributes' );
 
 // Escapes all occurances of 'the_archive_description'.
-add_filter( 'get_the_archive_description', 'understrap_escape_the_archive_description' );
+add_filter( 'get_the_archive_description', 'cdbootstrap_escape_the_archive_description' );
 
-if ( ! function_exists( 'understrap_escape_the_archive_description' ) ) {
+if ( ! function_exists( 'cdbootstrap_escape_the_archive_description' ) ) {
 	/**
 	 * Escapes the description for an author or post type archive.
 	 *
 	 * @param string $description Archive description.
 	 * @return string Maybe escaped $description.
 	 */
-	function understrap_escape_the_archive_description( $description ) {
+	function cdbootstrap_escape_the_archive_description( $description ) {
 		if ( is_author() || is_post_type_archive() ) {
 			return wp_kses_post( $description );
 		}
@@ -154,22 +154,22 @@ if ( ! function_exists( 'understrap_escape_the_archive_description' ) ) {
 		 */
 		return $description;
 	}
-} // End of if function_exists( 'understrap_escape_the_archive_description' ).
+} // End of if function_exists( 'cdbootstrap_escape_the_archive_description' ).
 
 // Escapes all occurances of 'the_title()' and 'get_the_title()'.
-add_filter( 'the_title', 'understrap_kses_title' );
+add_filter( 'the_title', 'cdbootstrap_kses_title' );
 
 // Escapes all occurances of 'the_archive_title' and 'get_the_archive_title()'.
-add_filter( 'get_the_archive_title', 'understrap_kses_title' );
+add_filter( 'get_the_archive_title', 'cdbootstrap_kses_title' );
 
-if ( ! function_exists( 'understrap_kses_title' ) ) {
+if ( ! function_exists( 'cdbootstrap_kses_title' ) ) {
 	/**
 	 * Sanitizes data for allowed HTML tags for post title.
 	 *
 	 * @param string $data Post title to filter.
 	 * @return string Filtered post title with allowed HTML tags and attributes intact.
 	 */
-	function understrap_kses_title( $data ) {
+	function cdbootstrap_kses_title( $data ) {
 		// Tags not supported in HTML5 are not allowed.
 		$allowed_tags = array(
 			'abbr'             => array(),
@@ -232,8 +232,8 @@ if ( ! function_exists( 'understrap_kses_title' ) ) {
 			'u'                => array(),
 			'var'              => array(),
 		);
-		$allowed_tags = apply_filters( 'understrap_kses_title', $allowed_tags );
+		$allowed_tags = apply_filters( 'cdbootstrap_kses_title', $allowed_tags );
 
 		return wp_kses( $data, $allowed_tags );
 	}
-} // End of if function_exists( 'understrap_kses_title' ).
+} // End of if function_exists( 'cdbootstrap_kses_title' ).

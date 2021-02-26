@@ -5,10 +5,6 @@
 
 Original Project: [https://understrap.com](https://understrap.com)
 
-Child Theme Project: [https://github.com/understrap/understrap-child](https://github.com/understrap/understrap-child)
-
-OverStrap Child Themes: [https://understrap.com/overstrap/](https://understrap.com/overstrap/)
-
 ## About
 
 I like Understrap but I have my own opinions. I've forked that great project here and swapped out the old build process for Laraval-Mix and just refined how packages are included. This is intended as a start theme rather than a parent theme.
