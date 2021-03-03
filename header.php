@@ -75,7 +75,7 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'depth'           => 2,
-						'walker'          => new Cdbootstrap_WP_Bootstrap_Navwalker(),
+						'walker'          => new CDBootstrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
 				

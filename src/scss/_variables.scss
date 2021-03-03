@@ -20,10 +20,18 @@ $rem-base: 16px;
   @return $remValues;
 }
 
-$fa-font-path:        "/wp-content/themes/veriforce/dist/fonts";
+$fa-font-path:        "/wp-content/themes/cdbootstrap/dist/fonts";
 
 $theme-colors: (
-	"white": #ffffff,
-	"text" : #212529,
-	"black": #000000
-);
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "white": #ffffff,
+  "text" : #212529,
+  "black": #000000
+)

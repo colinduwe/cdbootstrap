@@ -28,7 +28,7 @@
 //@import "~bootstrap/scss/pagination";
 //@import "~bootstrap/scss/badge";
 //@import "~bootstrap/scss/jumbotron";
-//@import "~bootstrap/scss/alert";
+@import "~bootstrap/scss/alert";
 //@import "~bootstrap/scss/progress";
 //@import "~bootstrap/scss/media";
 //@import "~bootstrap/scss/list-group";
@@ -61,6 +61,7 @@
 @import "components/galleries";
 @import "components/buttons";
 //@import "components/media";
+@import "components/forms";
 
 @import "components/gutenberg"; // <----------- Custom styles just for the back end
 
