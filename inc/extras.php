@@ -29,6 +29,30 @@ if ( ! function_exists( 'cdbootstrap_body_classes' ) ) {
 		if ( ! is_singular() ) {
 			$classes[] = 'hfeed';
 		}
+		
+		// Determine type of infinite scroll.
+		$pagination_type = get_theme_mod( 'cdbootstrap_pagination_type', 'button' );
+		$pagination_type = 'links';
+		
+		switch ( $pagination_type ) {
+			case 'button':
+				$classes[] = 'pagination-type-button';
+				break;
+			case 'scroll':
+				$classes[] = 'pagination-type-scroll';
+				break;
+			case 'links':
+				$classes[] = 'pagination-type-links';
+				break;
+		}
+	
+		// Check for dark mode.
+		if ( get_theme_mod( 'cdbootstrap_enable_dark_mode_palette', false ) ) {
+			$classes[] = 'has-dark-mode-palette';
+		}
+		
+		// Check for disabled animations.
+		$classes[] = get_theme_mod( 'cdbootstrap_disable_animations', false ) ? 'no-anim' : 'has-anim';			
 
 		return $classes;
 	}
@@ -237,3 +261,44 @@ if ( ! function_exists( 'cdbootstrap_kses_title' ) ) {
 		return wp_kses( $data, $allowed_tags );
 	}
 } // End of if function_exists( 'cdbootstrap_kses_title' ).
+
+/*	-----------------------------------------------------------------------------------------------
+	NO-JS CLASS
+	If we're missing JavaScript support, the HTML element will have a no-js class.
+--------------------------------------------------------------------------------------------------- */
+
+if ( ! function_exists( 'cdbootstrap_no_js_class' ) ) :
+	function cdbootstrap_no_js_class() {
+
+		?>
+		<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
+		<?php
+
+	}
+	add_action( 'wp_head', 'cdbootstrap_no_js_class', 0 );
+endif;
+
+
+/*	-----------------------------------------------------------------------------------------------
+	NOSCRIPT STYLES
+	Unset CSS animations triggered in JavaScript within a noscript element, to prevent the flash of 
+	unstyled animation elements that occurs when using the .no-js class.
+--------------------------------------------------------------------------------------------------- */
+
+if ( ! function_exists( 'cdbootstrap_noscript_styles' ) ) :
+	function cdbootstrap_noscript_styles() {
+
+		?>
+		<noscript>
+			<style>
+				.spot-fade-in-scale, .no-js .spot-fade-up { 
+					opacity: 1.0 !important; 
+					transform: none !important;
+				}
+			</style>
+		</noscript>
+		<?php
+
+	}
+	add_action( 'wp_head', 'cdbootstrap_noscript_styles', 0 );
+endif;

@@ -56,6 +56,7 @@
 @import "global/colors";
 @import "global/layout";
 @import "global/type";
+@import "global/animations";
 
 // Compontents
 @import "components/header";
@@ -64,3 +65,5 @@
 @import "components/buttons";
 //@import "components/media";
 @import "components/forms";
+@import "components/posts-grid";
+@import "components/pagination";

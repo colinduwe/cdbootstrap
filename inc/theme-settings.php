@@ -35,6 +35,9 @@ if ( ! function_exists( 'cdbootstrap_get_theme_default_settings' ) ) {
 			'cdbootstrap_posts_index_style' => 'default',   // Latest blog posts style.
 			'cdbootstrap_sidebar_position'  => 'right',     // Sidebar position.
 			'cdbootstrap_container_type'    => 'container', // Container width.
+			'cdbootstrap_pagination_type'	=> 'links',	// Pagination type (button, scroll, links)
+			'cdbootstrap_enable_dark_mode_palette' => 'false', //Dark mode 
+			'cdbootstrap_disable_animations' => 'false',		// Animations
 		);
 
 		/**

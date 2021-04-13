@@ -29,6 +29,7 @@ $cdbootstrap_includes = array(
 	// '/class-kirki-installer-section.php', // Require Kirki plugin
 	'/advanced-custom-fields.php',			// Advanced Custom Field Support
 	'/search.php',							// Search functions like the search in the primary nav
+	'/ajax-load-more-filter.php',			// Support of Ajax load more and Ajax filter functions
 );
 
 // Load WooCommerce functions if WooCommerce is activated.

@@ -27,13 +27,13 @@ $container = get_theme_mod( 'cdbootstrap_container_type' );
 
 					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
 
-					<?php cdbootstrap_post_nav(); ?>
+					<?php cdbootstrap_post_nav();
 
 					// If comments are open or we have at least one comment, load up the comment template.
 					if ( comments_open() || get_comments_number() ) {
 						comments_template();
 					}
-				}
+				endwhile;
 				?>
 
 			</main><!-- #main -->

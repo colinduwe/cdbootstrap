@@ -16,3 +16,4 @@ import 'bootstrap/js/src/collapse';
 
 import './skip-link-focus-fix.js';
 import './header-search-toggle.js';
+import './ajax-load-more-filter.js';

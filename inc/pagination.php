@@ -62,30 +62,96 @@ if ( ! function_exists( 'cdbootstrap_pagination' ) ) {
 		if ( ! $links ) {
 			return;
 		}
+		
+		global $wp_query;
+
+		// Set the type of pagination to use. Available types: button, links, and scroll.
+		$pagination_type = get_theme_mod( 'cdbootstrap_pagination_type', 'button' );
+		$pagination_type = 'scroll';
+		
+		// Combine the query with the query_vars into a single array.
+		$query_args = array_merge( $wp_query->query, $wp_query->query_vars );
+		
+		// If max_num_pages is not already set, add it.
+		if ( ! array_key_exists( 'max_num_pages', $query_args ) ) {
+			$query_args['max_num_pages'] = $wp_query->max_num_pages;
+		}
+		
+		// If post_status is not already set, add it.
+		if ( ! array_key_exists( 'post_status', $query_args ) ) {
+			$query_args['post_status'] = 'publish';
+		}
+		
+		// Make sure the paged value exists and is at least 1.
+		if ( ! array_key_exists( 'paged', $query_args ) || 0 == $query_args['paged'] ) {
+			$query_args['paged'] = 1;
+		}
+		
+		// Encode our modified query.
+		$json_query_args = wp_json_encode( $query_args ); 
+		
+		// Set up the wrapper class.
+		$wrapper_class = 'pagination-type-' . $pagination_type;
+		
+		// Indicate when we're loading into the last page, so the pagination can be hidden for the button and scroll types.
+		if ( ! ( $query_args['max_num_pages'] > $query_args['paged'] ) ) {
+			$wrapper_class .= ' last-page';
+		} else {
+			$wrapper_class .= '';
+		}
 
 		?>
-
-		<nav aria-labelledby="posts-nav-label">
-
-			<h2 id="posts-nav-label" class="sr-only">
-				<?php echo esc_html( $args['screen_reader_text'] ); ?>
-			</h2>
-
-			<ul class="<?php echo esc_attr( $class ); ?>">
-
-				<?php
-				foreach ( $links as $key => $link ) {
+		
+		<div class="pagination-wrapper <?php echo esc_attr( $wrapper_class ); ?>">
+		
+			<div id="pagination" class="section-inner text-center" data-query-args="<?php echo esc_attr( $json_query_args ); ?>" data-pagination-type="<?php echo esc_attr( $pagination_type ); ?>" data-load-more-target=".load-more-target">
+		
+				<?php if ( ( $query_args['max_num_pages'] > $query_args['paged'] ) ) : ?>
+		
+					<?php if ( $pagination_type == 'scroll' ) : ?>
+						<div class="scroll-loading">
+							<div class="loading-icon">
+								<span class="dot-pulse"></span>
+							</div>
+						</div>
+					<?php endif; ?>
+		
+					<?php if ( $pagination_type == 'button' ) : ?>
+						<button id="load-more" class="btn btn-primary btn-lg d-no-js-none do-spot spot-fade-up">
+							<span class="load-text"><?php esc_html_e( 'Load More', 'cdbootstrap' ); ?></span>
+							<span class="loading-icon"><span class="dot-pulse"></span></span>
+						</button>
+					<?php endif;
+		
+					// The pagination links also work as a no-js fallback, so they always need to be output.
 					?>
-					<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
-						<?php echo str_replace( 'page-numbers', 'page-link', $link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-					</li>
-					<?php
-				}
-				?>
+					<nav class="link-pagination" aria-labelledby="posts-nav-label">
 
-			</ul>
-
-		</nav>
+						<h2 id="posts-nav-label" class="sr-only">
+							<?php echo esc_html( $args['screen_reader_text'] ); ?>
+						</h2>
+			
+						<ul class="<?php echo esc_attr( $class ); ?>">
+			
+							<?php
+							foreach ( $links as $key => $link ) {
+								?>
+								<li class="page-item <?php echo strpos( $link, 'current' ) ? 'active' : ''; ?>">
+									<?php echo str_replace( 'page-numbers', 'page-link', $link ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+								</li>
+								<?php
+							}
+							?>
+			
+						</ul>
+			
+					</nav>
+		
+				<?php endif; ?>
+		
+			</div><!-- #pagination -->
+		
+		</div><!-- .pagination-wrapper -->
 
 		<?php
 	}
